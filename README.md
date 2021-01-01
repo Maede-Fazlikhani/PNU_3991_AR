@@ -6,7 +6,7 @@
 - [Github](https://github.com/maede-fazlikhani)
 - [Resume](http://maede-fazlikhani.github.io/)
 - [SOP]()
-- [JavaScript]()
+- [Certificates]()
 - [PNU_3991_AR]()
 
 ------------------
