@@ -4,9 +4,9 @@
 
 # مائده فضلی خانی
 - [Github](https://github.com/maede-fazlikhani)
-- [Resume](http://maede-fazlikhani.github.io/)
-- [SOP]()
-- [Certificates]()
+- [Resume](https://maede-fazlikhani.github.io/)
+- [SOP](https://maede-fazlikhani.github.io/SOP/)
+- [Certificates](https://maede-fazlikhani.github.io/Certificates/)
 - [PNU_3991_AR](https://github.com/Maede-Fazlikhani/PNU_3991_AR.git)
 
 ------------------
