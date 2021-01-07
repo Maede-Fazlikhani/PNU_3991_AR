@@ -8,6 +8,16 @@
 - [SOP](https://maede-fazlikhani.github.io/SOP/)
 - [Certificates](https://maede-fazlikhani.github.io/Certificates/)
 - [PNU_3991_AR](https://github.com/Maede-Fazlikhani/PNU_3991_AR.git)
+------------------
+> ارزیابی ها
+
+##  بخش عمومی
+- [ارزیابی رزومه و انگیزه نامه](https://github.com/saharzeinivand/PNU_3991_AR/blob/main/_General/SZ_CV_CheckList_AR_3991.pdf)
+- [ارزیابی بخش عمومی](https://github.com/saharzeinivand/PNU_3991_AR/blob/main/_General/SZ_GeneralSection_CheckList_AR_3991.pdf)
+
+##  بخش دروس ارشد
+- [ ارزیابی درس_نظریه زبان ها وماشین](https://github.com/saharzeinivand/PNU_3991_AR/blob/main/AdvancedSoftwareEngineering/SZ_AdvancedSoftwareEngineering_CheckList_AR_3991.pdf)
+
 
 ------------------
 ## فهرست درس ها 
