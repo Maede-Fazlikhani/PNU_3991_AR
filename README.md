@@ -11,7 +11,7 @@
 
 ------------------
 ## فهرست درس ها 
-- [Theory of Languages and Machines](https://github.com/farzadmoomeni/PNU_3991_AR/tree/main/Theory%20of%20Languages%20and%20Machines)
+- [Theory of Languages and Machines](https://github.com/Maede-Fazlikhani/PNU_3991_AR/tree/main/Theory%20of%20Languages%20and%20Machines)
   - [Theory of Languages and Machines.tex](https://github.com/farzadmoomeni/PNU_3991_AR/blob/main/Theory%20of%20Languages%20and%20Machines/Introduction%20to%20Automata%20Theory%20(page%20249-252).tex)
   - [Theory of Languages and Machines.pdf](https://github.com/farzadmoomeni/PNU_3991_AR/blob/main/Theory%20of%20Languages%20and%20Machines/Introduction%20to%20Automata%20Theory%20(page%20249-252).pdf)
 
