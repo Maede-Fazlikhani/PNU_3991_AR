@@ -50,7 +50,7 @@
   </tr>
   <tr>
     <th ><a > </a></th>
-    <th ><a  href="https://github.com/AliRazavi-edu/PNU_3991/tree/master/_MSc/SoftwareDevelopmentMethodologies#TOC">نظریه زبان ها و ماشین ها</a></th>
+    <th ><a  href="https://github.com/Maede-Fazlikhani/PNU_3991_AR/tree/main/Theory%20of%20Languages%20and%20Machines">نظریه زبان ها و ماشین ها</a></th>
     <th ><a > </a></th>
     <th></th>
     <th ><a ></a></th>
@@ -75,9 +75,9 @@
    <tr>
     <th ></th>
     <th ></th>
-    <th><a  href="https://github.com/AliRazavi-edu/PNU_3991/tree/master/_MSc/SoftwareDevelopmentMethodologies#TOC">سیستم عامل</a></th>
+    <th><a  href="https:">سیستم عامل</a></th>
     <th></th>
-    <th ><a  href="https://github.com/AliRazavi-edu/PNU_3991/tree/master/_MSc/SoftwareDevelopmentMethodologies#TOC">پایگاه داده ها</a></th>
+    <th ><a  href="https:">پایگاه داده ها</a></th>
     <th>سه شنبه</th>
   </tr>
    <tr>
@@ -99,9 +99,9 @@
     <tr>
     <th ></th>
      <th ><a></a></th>
-     <th ><a  href="https://github.com/AliRazavi-edu/PNU_3991/tree/master/_MSc/SoftwareArchitecture#TOC">معماری نرم افزار</a></th>
+     <th ><a  href="https:">معماری نرم افزار</a></th>
      <th><a></a></th>
-    <th><a href="https://github.com/AliRazavi-edu/PNU_3991/tree/master/_MSc/AdvancedSoftwareEngineering#TOC">اصول طراحی کامپایلر</a></th>
+    <th><a href="https:">اصول طراحی کامپایلر</a></th>
     <th>جمعه</th>
   </tr>
 </table>
