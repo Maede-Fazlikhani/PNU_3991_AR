@@ -12,11 +12,11 @@
 > ارزیابی ها
 
 ##  بخش عمومی
-- [ارزیابی رزومه و انگیزه نامه](https://github.com/saharzeinivand/PNU_3991_AR/blob/main/_General/SZ_CV_CheckList_AR_3991.pdf)
-- [ارزیابی بخش عمومی](https://github.com/saharzeinivand/PNU_3991_AR/blob/main/_General/SZ_GeneralSection_CheckList_AR_3991.pdf)
+- [ارزیابی رزومه و انگیزه نامه](https://github.com/Maede-Fazlikhani/PNU_3991_AR/blob/main/general/XX_GeneralSection_CheckList_AR_3991.pdf)
+- [ارزیابی بخش عمومی](https://github.com/Maede-Fazlikhani/PNU_3991_AR/blob/main/Check%20list/XX_CV_CheckList_AR_3991.pdf)
 
 ##  بخش دروس کارشناسی
-- [ ارزیابی درس_نظریه زبان ها وماشین](https://github.com/saharzeinivand/PNU_3991_AR/blob/main/AdvancedSoftwareEngineering/SZ_AdvancedSoftwareEngineering_CheckList_AR_3991.pdf)
+- [ ارزیابی درس_نظریه زبان ها وماشین](https://github.com/Maede-Fazlikhani/PNU_3991_AR/blob/main/Theory%20of%20Languages%20and%20Machines/XX_Theory-of-Languages-and-Machines_CheckList_AR_3991.pdf)
 
 
 ------------------
