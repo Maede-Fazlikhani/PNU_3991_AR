@@ -1,0 +1,191 @@
+%%%%%%%%%% Maede %%%%%%%%%%%%%%%%%
+
+\documentclass[8pt]{report}
+\usepackage{amsmath}
+\usepackage{mathastext}
+\usepackage{graphicx}
+
+
+
+\begin{document}
+	
+	
+The NFA for accepting $(0,1)^{*} 011(0,1)^{*}$ is
+
+   \begin{figure}[!ht]
+	\centering
+	\includegraphics[scale=0.4]{number1}
+	
+    \end{figure}
+
+The equivalent DFA is
+
+  \begin{figure}[!ht]
+	\centering
+	\includegraphics[scale=0.4]{2}
+	
+\end{figure}
+
+
+
+The converted TM is
+
+  \begin{figure}[!ht]
+	\centering
+	\includegraphics[scale=0.4]{3}
+	
+\end{figure}
+
+The modified TM is (converting 011 by 100 ) as follows. The modifications are denoted in bold.
+
+  \begin{figure}[!ht]
+	\centering
+	\includegraphics[scale=0.4]{4}
+	
+\end{figure}
+
+8.5  { Two-stack PDA and Turing Machine }
+
+Two-stack PDA is already discussed in the pushdown automata chapter. It is also discussed that a PDA cannot be only two stack but may be more than two stacks $\left(\mathrm{a}^{\mathrm{n}} \mathrm{b}^{\mathrm{n}} \mathrm{c}^{\mathrm{n}} \mathrm{d}^{\mathrm{n}}, \mathrm{n} \geq 0\right) .$ In real, the language accepting power of a PDA increases by adding extra stacks. Here, the following question arises 'is two-stack (or more than two stacks) PDA as strong as the TM?'. In this section, we shall learn about a theorem proposed by an American artificial intelligence scientist Marvin Minsky called the Minsky theorem which answers this question.
+
+8.5 .1  { Minsky Theorem }
+
+Any language accepted by a two-stack PDA can also be accepted by some TM and vice versa.
+
+8.5 .1 .1  { General Minsky Model }
+
+A general Minsky model is shown in the following figure.
+
+  \begin{figure}[!ht]
+	\centering
+	\includegraphics[scale=0.4]{5}
+	
+\end{figure}
+
+The model in Fig. 8.4 is a two-stack PDA containing an input tape, a reading head, and finite control as it was in PDA. The additionals are two stacks $S_{1}$ and $S_{2}$. Let the language be $a^{n} b^{n} c^{n}$ for $n \geq 1$. Scanning 'a', the symbols (say X) are put into stack $S_{1}$. With the stack top $^{\circ} \mathrm{X}$ ' in $\mathrm{S}_{1}, \mathrm{~b}$ ' is scanned and the symbols (say Y) are put into stack $\mathrm{S}_{2}$. At the time of traversing ' $\mathrm{c}$ ', the stack symbols must be $\mathrm{X}$ (for $\mathrm{S}_{1}$ ) and $\mathrm{Y}$ (For $\mathrm{S}_{2}$ ). These are popped for traversing 'c'.
+
+ A two-stack PDA is capable of accepting $\left(\mathrm{a}^{\mathrm{n}} \mathrm{b}^{\mathrm{n}} \mathrm{c}^{\mathrm{n}} \mathrm{d}^{\mathrm{n}}, \mathrm{n} \geq 1\right),\left(\mathrm{a}^{\mathrm{n}} \mathrm{b}^{\mathrm{n}} \mathrm{c}^{\mathrm{n}} \mathrm{d}^{\mathrm{n}} \mathrm{e}^{\mathrm{n}}, \mathrm{n} \geq 1\right),$ and so on, with the
+additional stack. Accepting these types of languages is not possible for a single-stack PDA but possible for a TM. By this process, the two-stack PDA simulates a TM. The following example shows the acceptance of $\left(\mathrm{a}^{\mathrm{n}} \mathrm{b}^{\mathrm{n}} \mathrm{c}^{\mathrm{n}} \mathrm{d}^{\mathrm{n}}, \mathrm{n} \geq 1\right)$ using the two-stack PDA.
+	
+Example
+$\mathbf{8 . 2 2}$ Design a two-stack PDA for $\left(\mathrm{a}^{\mathrm{n}} \mathrm{b}^{\mathrm{n}} \mathrm{c}^{\mathrm{n}} \mathrm{d}^{\mathrm{n}}, \mathrm{n} \geq 1\right)$
+	
+Solution: Traversing 'a', X are put into stack S. Traversing 'b' with the stack top 'X' in S $_{1}$, $\mathrm{X}$ ' is popped from$ S_1$, and ‘Y’ is pushed into $S_2$. Traversing ‘c’ with the stack top ‘Y’ in $S_2$, ‘Y’ is popped from $\mathrm{S}_{2}$, and $\mathrm{Z}$ ' is pushed into $\mathrm{S}_{1}$. Traversing $\mathrm{d}^{\prime}$, $\mathrm{Z}$ ' is popped from $\mathrm{S}_{1}$. The transitional functions are
+
+
+
+
+$\delta\left(\mathrm{q}_{0}, \lambda, \mathrm{z}_{1}, \mathrm{z}_{2}\right) \rightarrow\left(\mathrm{q}_{1}, \mathrm{z}_{1}, \mathrm{z}_{2}\right)\left(\mathrm{z}_{1}\right.$ and $\mathrm{z}_{2}$ are stack bottom symbols of $\mathrm{S}_{1}$ and $\mathrm{S}_{2},$ respectively.
+ $)$
+ 
+ 
+$\delta\left(\mathrm{q}_{1}, \mathrm{a}, \mathrm{z}_{1}, \mathrm{z}_{2}\right)\rightarrow\left(\mathrm{q}_{1}, \mathrm{Xz}_{1}, \mathrm{z}_{2}\right)$
+
+$\delta\left(\mathrm{q}_{1}, \mathrm{a}, \mathrm{X}, \mathrm{z}_{2}\right) \rightarrow\left(\mathrm{q}_{1}, \mathrm{XX}, \mathrm{z}_{2}\right)$
+
+$\delta\left(\mathrm{q}_{1}, \mathrm{~b}, \mathrm{X}, \mathrm{z}_{2}\right) \rightarrow\left(\mathrm{q}_{2}, \lambda, \mathrm{Yz}_{2}\right)$
+
+$\delta\left(\mathrm{q}_{2}, \mathrm{~b}, \mathrm{X}, \mathrm{Y}\right) \rightarrow\left(\mathrm{q}_{2}, \lambda, \mathrm{YY}\right)$
+
+$\delta\left(\mathrm{q}_{2}, \mathrm{c}, \mathrm{z}_{1}, \mathrm{Y}\right) \rightarrow\left(\mathrm{q}_{3}, \mathrm{Zz}_{1}, \lambda\right)$
+
+$\delta\left(\mathrm{q}_{3}, \mathrm{c}, \mathrm{Z}, \mathrm{Y}\right) \rightarrow\left(\mathrm{q}_{3}, \mathrm{ZZ}, \lambda\right)$
+
+$\delta\left(\mathrm{q}_{3}, \mathrm{~d}, \mathrm{Z}, \mathrm{z}_{2}\right) \rightarrow\left(\mathrm{q}_{4}, \lambda, \mathrm{z}_{2}\right)$
+
+$\delta\left(\mathrm{q}_{4}, \mathrm{~d}, \mathrm{Z}, \mathrm{z}_{2}\right) \rightarrow\left(\mathrm{q}_{4}, \lambda, \mathrm{z}_{2}\right)$
+
+$\delta\left(\mathrm{q}_{4}, \lambda, \mathrm{z}_{1}, \mathrm{z}_{2}\right) \rightarrow\left(\mathrm{q}_{\mathrm{f}}, \mathrm{z}_{1}, \mathrm{z}_{2}\right) / /$ accepted by the final state
+
+
+
+\begin{center}
+	What We Have Learned So Far
+\end{center}
+
+
+
+1. The Turing machine was proposed by A.M. Turing in 1936 as a model of any possible combination. Any computational process carried out by the present day's computer can be done on the Turing machine.
+
+2. The Turing machine is the machine format of unrestricted language, i.e., all types of languages are accepted by the Turing machine.
+
+3. Undecidable problems are not solved by the computer as no Turing machine can be developed for these problems.
+
+4. The mathematical description of the Turing machine consists of 7 touples $\left(\mathrm{Q}, \Sigma, \Gamma, \delta, \mathrm{q}_{0}, \mathrm{~B}, \mathrm{~F}\right)$ where $\mathrm{Q}$ is the finite set of states, $\Sigma$ is the finite set of input alphabets, $\Gamma$ is the finite set of allowable tape symbol, $\delta$ is the transitional function, $\mathrm{q}_{0}$ is the initial state, $\mathrm{B}$ is the blank symbol, and $\mathrm{F}$ is the final state.
+
+5. The transitional functions of the Turing machine are in the form $\mathrm{Q} \times \Gamma \rightarrow(\mathrm{Q} \times \Gamma \times\{\mathrm{L}, \mathrm{R}, \mathrm{H}\})$. That is, from one state by getting one input from the input tape the machine moves to a state, writing a symbol on the tape, and moves to left, right, or halts.
+
+6. The mechanical diagram of the Turing machine consists of the input tape, the finite control and the read-write head.
+
+7. Upon execution of a transitional function, the machine goes to some state, writes a symbol in the cell of the input tape from where the input symbol was scanned, and moves the reading head to the left or right or halts.
+
+8. The instantaneous description (ID) of a Turing machine remembers the contents of all cells from the rightmost to at least the leftmost, the cell currently being scanned by the read-write head, and the state of the machine at a given instance of time.
+
+Solved Problems
+
+1. Consider the Turing machine's description in the following table below. Draw the computation sequence of the input string 00 . $[\mathrm{WBUT} 2008]$
+
+\begin{tabular}{cccc}
+	\hline Present State & Tape Symbol :: $\mathrm{b}$ & Tape Symbol :: 0 & Tape Symbol : 1 \\
+	\hline $\mathrm{Q}_{1}$ & $1 \mathrm{Lq}_{2}$ & $0 \mathrm{Rq}_{1}$ & $-$ \\
+	$\mathrm{Q}_{2}$ & $\mathrm{bRq}_{3}$ & $0 \mathrm{Lq}_{2}$ & $1 \mathrm{Lq}_{2}$ \\
+	$\mathrm{Q}_{3}$ & $-$ & $\mathrm{bRq}_{4}$ & $\mathrm{bRq}_{5}$ \\
+	$\mathrm{Q}_{4}$ & $0 \mathrm{Rq}_{5}$ & $0 \mathrm{Rq}_{4}$ & $1 \mathrm{Rq}_{4}$ \\
+	$\mathrm{Q}_{5}$ & $0 \mathrm{Lq}_{2}$ & $-$ & $-$ \\
+	\hline
+	
+\end{tabular}
+
+
+
+      Solution: $\left(\mathrm{Q}_{1}, \mathrm{~B}_{-} 00 \mathrm{~B}\right) \rightarrow\left(\mathrm{Q}_{1}, 00 \mathrm{~B}\right) \rightarrow\left(\mathrm{Q}_{1}, 00 \mathrm{~B}\right) \rightarrow\left(\mathrm{Q}_{2}, 001\right) \rightarrow\left(\mathrm{Q}_{2}, \underline{0} 01\right) \rightarrow\left(\mathrm{Q}_{2}, \underline{\mathrm{B}} 001\right)$
+$\left.\rightarrow\left(\mathrm{Q}_{3}, \mathrm{~B} 001\right) \rightarrow\left(\mathrm{Q}_{4}, \mathrm{~B} 01\right) \rightarrow^{-}\left(\mathrm{Q}_{4}, \mathrm{~B} 01\right) \rightarrow \overline{(\mathrm{Q}}_{4}, \mathrm{~B} 01 \mathrm{~B}\right) \stackrel{-}{\rightarrow}\left(\mathrm{Q}_{5}, \mathrm{~B} 01 \overline{0} \mathrm{~B}\right) \rightarrow\left(\mathrm{Q}_{2}, \overline{\mathrm{B} 0} 100\right)$
+$\rightarrow\left(\mathrm{Q}_{2}, \mathrm{~B} 0 \underline{1} 00\right) \rightarrow\left(\mathrm{Q}_{2}, \mathrm{~B}_{-} 100\right) \rightarrow\left(\mathrm{Q}_{2}, \underline{\mathrm{B}} 0100\right) \rightarrow\left(\mathrm{Q}_{3}, \mathrm{~B}_{-} 100\right) \rightarrow\left(\mathrm{Q}_{4}, \mathrm{~B} 0 \underline{1} 00\right) \rightarrow\left(\mathrm{Q}_{4}, \mathrm{~B} 0100\right)$
+$\rightarrow\left(\mathrm{Q}_{4}, \mathrm{~B} 0 \overline{1} 00\right) \rightarrow\left(\mathrm{Q}_{4}, \mathrm{~B} \overline{0} 100 \underline{\mathrm{B}}\right) \rightarrow\left(\mathrm{Q}_{5}, \overline{\mathrm{B}} 01000 \underline{\mathrm{B}}\right) \rightarrow\left(\mathrm{Q}_{2}, \mathrm{~B} 010000\right)$
+(By this process, it will continue as there is no halt in the Turing Machine.)
+
+
+
+
+2. Design a Turing Machine to test a string of balanced parenthesis. Show an ID for ()$(())$
+Solution: There are two types of parentheses-open parentheses and close parentheses. Balanced parenthesis means that for each open parenthesis there is a close parenthesis. It may be nested like $((()))$ or may be non-nested like $(()())$ or ()()() or any other form. But for each open parenthesis, there is a close parenthesis. [The definition that a balanced parenthesis means an equal number of open and close parentheses is wrong.
+
+As an example, $)($ ) $($ ) $($ is not a balanced parenthesis. $]$ The string must start with an open parenthesis and after that open parenthesis or close parenthesis can appear, but for any position of the string, the number of open parenthesis is greater than or equal to the number of close parenthesis. The Turing Machine is designed as follows. Start from the leftmost symbol and traverse right to find the first close parenthesis. The transitional function is
+
+$$
+\delta\left(\mathrm{q}_{0},^{\text {' }}\left(^{\circ}\right) \rightarrow\left(\mathrm{q}_{0},(, \mathrm{R})\right.\right.
+$$
+
+Upon getting the first close parenthesis, replace it by 'X', change the state to $\mathrm{q}_{1}$, and move left to find the open parenthesis for the replaced close parenthesis. The transitional function is
+$$
+\left.\delta\left(\mathrm{q}_{0},^{\circ}\right)^{\prime}\right) \rightarrow\left(\mathrm{q}_{1}, \mathrm{X}, \mathrm{L}\right)
+$$
+Getting the open parenthesis, replace it by 'X' and change the state to $\mathrm{q}_{0} .$ The transitional function is
+$$
+\delta\left(\mathrm{q}_{1},^{\circ}\left(^{\circ}\right) \rightarrow\left(\mathrm{q}_{0}, \mathrm{X}, \mathrm{R}\right)\right.
+$$
+
+Then, traverse towards the right to find the close parenthesis. Here, the machine may have to traverse $\mathrm{X}$, which is the replaced symbol for close parenthesis. The transitional function for traversing this is
+$$
+\delta\left(\mathrm{q}_{0}, \mathrm{X}^{\circ}\right) \rightarrow\left(\mathrm{q}_{0}, \mathrm{X}, \mathrm{R}\right)
+$$
+For a nested parenthesis like $(()),$ the machine has to traverse $X,$ which is the replaced symbol of the open parenthesis at the time of finding the open parenthesis. The transitional function for traversing this is
+$$
+\delta\left(\mathrm{q}_{1},{ }^{\circ} \mathrm{X}^{\circ}\right) \rightarrow\left(\mathrm{q}_{1}, \mathrm{X}, \mathrm{L}\right)
+$$
+
+Traversing right, if $\mathrm{B}$ appears as an input, then there is no parenthesis (open or close) left at the right side. Then, traverse left to find if any parenthesis is left at the left side or not. The transitional function is
+$$
+\delta\left(\mathrm{q}_{0}, \mathrm{~B}^{c}\right) \rightarrow\left(\mathrm{q}_{2}, \mathrm{~B}, \mathrm{~L}\right)
+$$
+At the time of left traversing, the machine has to traverse $\mathrm{X}$ by the following transitional function
+$$
+\delta\left(\mathrm{q}_{2}, \mathrm{X}^{\circ}\right) \rightarrow\left(\mathrm{q}_{2}, \mathrm{~B}, \mathrm{~L}\right)
+$$
+At the left hand side if it gets $\mathrm{B},$ the machine halts.
+$$
+\delta\left(\mathrm{q}_{2},{ }^{\circ} \mathrm{B}^{\circ}\right) \rightarrow\left(\mathrm{q}_{3}, \mathrm{~B}, \mathrm{H}\right)
+$$
+
+  \end{document}
+	
