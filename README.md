@@ -115,9 +115,17 @@
    <tr>
     <th ></th>
      <th ><a></a></th>
+     <th ></th>
+     <th><a></a></th>
+    <th></th>
+    <th>پنج شنبه</th>
+  </tr>
+    <tr>
+    <th ></th>
+     <th ><a></a></th>
      <th ><a  href="https://github.com/AliRazavi-edu/PNU_3991/tree/master/_MSc/SoftwareArchitecture#TOC">معماری نرم افزار</a></th>
      <th><a></a></th>
     <th><a href="https://github.com/AliRazavi-edu/PNU_3991/tree/master/_MSc/AdvancedSoftwareEngineering#TOC">اصول طراحی کامپایلر</a></th>
-    <th>پنج شنبه</th>
+    <th>جمعه</th>
   </tr>
 </table>
